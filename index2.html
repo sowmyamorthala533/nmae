@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="searchbox" name="searchbox" placeholder="enter">
+    <ul id="lists">
+        <li>apple</li>
+        <li>banana</li>
+        <li>grapes</li>
+        <li>Mango</li>
+    </ul>
+    <script>
+        const inputValue=document.getElementById("searchbox")
+        const lists=document.querySelectorAll("#lists li")
+        console.log(lists)
+        inputValue.addEventListener("input",(e)=>{
+            const searchValue=e.target.value.toLowerCase()
+            console.log(searchValue)
+            lists.forEach((item)=>{
+                console.log(item.textContent)
+            if(item.textContent.toLowerCase().includes(searchValue)){
+                item.style.display="block"
+            }
+            else{
+                item.style.display="none"
+            }
+        })
+})
+    </script>
+</body>
+</html>

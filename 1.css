@@ -1,0 +1,10 @@
+.div{
+    width: 500px; /* Set the width where the color will be applied */
+    height: 300px; /* Set the height */
+    margin: 20px auto; /* Center the box horizontally */
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgray; /* Initial background color */
+}
